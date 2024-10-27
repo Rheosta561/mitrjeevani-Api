@@ -4,6 +4,9 @@ from modelling import get_response  # Make sure this path is correct
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/')
+def home():
+    return "Welcome to the Flask API on Vercel!"
 
 @app.route('/api/process', methods=['POST'])
 def process_input():
